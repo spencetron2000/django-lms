@@ -1,0 +1,91 @@
+[tool.poetry]
+name = "django-lms"
+version = "1.0.0"
+description = "A learning management system using django web framework. Course add and drop, grade and assessment result management, online quiz, report generator, student and lecturers management, dashboard, and so much more..."
+authors = ["Adil Mohak"]
+maintainers = ["Adil Mohak"]
+license = "MIT License"
+readme = "README.md"
+repository = "https://github.com/adilmohak/django-lms"
+homepage = "https://github.com/adilmohak/django-lms"
+keywords = [
+    "lms", 
+    "learning management system", 
+    "django"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System"
+]
+packages = [
+    { include = "accounts"},
+    { include = "app"},
+    { include = "course"},
+    { include = "locale"},
+    { include = "media"},
+    { include = "payments"},
+    { include = "quiz"},
+    { include = "result"},
+    { include = "search"},
+    { include = "SMS"},
+    { include = "static"},
+    { include = "templates"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rcssmin = "1.1.0"
+pytz = "2022.7"
+python-slugify = "7.0.0"
+pillow = "9.3.0"
+argon2-cffi = "21.3.0"
+whitenoise = "6.2.0"
+redis = "4.4.0"
+hiredis = "2.1.0"
+django = "4.0.8"
+django-environ = "0.9.0"
+django-model-utils = "4.3.1"
+django-crispy-forms = "1.14.0"
+crispy-bootstrap5 = "0.7"
+django-compressor = "4.1"
+django-redis = "5.2.0"
+djangorestframework = "3.14.0"
+django-cors-headers = "3.13.0"
+drf-spectacular = "0.25.1"
+reportlab = "4.0.4"
+stripe = "5.5.0"
+gopay = "2.0.1"
+gunicorn = "20.1.0"
+psycopg2-binary = "2.9.5"
+django-anymail = {version = "9.0", extras = ["amazon-ses"]}
+django-storages = {version = "1.13.1", extras = ["boto3"]}
+
+
+[tool.poetry.group.dev.dependencies]
+werkzeug = {version = "2.2.2", extras = ["watchdog"]}
+ipdb = "0.13.11"
+mypy = "0.982"
+django-stubs = "1.13.1"
+pytest = "7.2.0"
+pytest-sugar = "0.9.6"
+djangorestframework-stubs = "1.8.0"
+sphinx = "5.3.0"
+sphinx-autobuild = "2021.3.14"
+flake8 = "6.0.0"
+flake8-isort = "5.0.3"
+coverage = "7.0.0"
+black = "22.12.0"
+pylint-django = "2.5.3"
+pre-commit = "2.20.0"
+django-debug-toolbar = "3.8.1"
+django-extensions = "3.2.1"
+django-coverage-plugin = "3.0.0"
+pytest-django = "4.5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

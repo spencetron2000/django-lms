@@ -93,3 +93,32 @@ Last but not least, go to this address http://127.0.0.1:8000
 </div>
 
 ### Show your support by ⭐️ this project!
+
+
+### Now installable with Poetry
+
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+
+#### Install Poetry
+
+[https://python-poetry.org/docs/](https://python-poetry.org/docs/)
+
+```bash
+cd django-lms
+python3 -m venv .
+source bin/activate
+pip install -U pip setuptools
+pip install poetry
+```
+
+#### Build django-lms
+
+```bash
+poetry build
+```
+
+#### Install django-lms
+
+```bash
+pip install django_lms-1.0.0-py3-none-any.whl
+```
